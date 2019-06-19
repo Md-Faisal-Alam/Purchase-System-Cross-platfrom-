@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Dream App</title>
+    <link 
+        rel="stylesheet" 
+        href="https://unpkg.com/@ionic/core@latest/css/ionic.bundle.css"
+    />
+    <script src="https://unpkg.com/@ionic/core@latest/dist/ionic.js"></script> 
+    
+</head>
+<body>
+    <ion-app>
+        <ion-header>
+            <ion-toolbar color="primary">
+                <ion-title>DREAM APPLICATION</ion-title>
+            </ion-toolbar>
+        </ion-header>
+        <ion-contant>
+            <ion-grid>
+                <ion-row>
+                    <ion-col size-md="6" offset-md="3" >
+                        <ion-card>
+                            <ion-card-header>
+                                <ion-card-title>New Expense</ion-card-title>
+                            </ion-card-header>
+                            <ion-card-contant>
+                                <ion-item margin>
+                                    <ion-label position="floating">Expense Reason</ion-label>
+                                    <ion-input type="text" id="input-reason"></ion-input>
+                                </ion-item>
+                                <ion-item margin>
+                                    <ion-label position="floating">Expense Amount</ion-label>
+                                    <ion-input type="number" id="input-amount"></ion-input>
+                                </ion-item>
+                                <div margin-vertical text-right>
+                                    <ion-button fill="outline" color="danger"id="btn-cancel">
+                                        <ion-icon slot="start" name="close" ></ion-icon>
+                                        Clear
+                                    </ion-button>
+                                    <ion-button fill="outline" color="success"  id="btn-confirm" margin-left>
+                                        <ion-icon slot="start" name="add"></ion-icon>
+                                        add Expense
+                                    </ion-button>
+                                </div>
+                            </ion-card-contant>
+                        </ion-card>               
+                    </ion-col>
+                </ion-row>
+                <ion-row >
+                    <ion-col size-md="6" offset-md="3">
+                        <ion-list id="expenses-list"></ion-list>
+                    </ion-col>
+                </ion-row>
+                <ion-row>
+                    <ion-col size-md="6" offset-md="3">
+                        <p margin>Total Expenses: <span id="total-expenses"></span></p>
+                    </ion-col>
+                </ion-row>
+            </ion-grid>
+        </ion-contant>
+        <ion-alert-controller></ion-alert-controller>
+    </ion-app>
+    <script src="app.js"></script>
+</body>
+</html>
